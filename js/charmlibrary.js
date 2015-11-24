@@ -94,10 +94,7 @@ $(document).ready(function() {
 
 	autoPlay();
 
-	/**
-	 * 全选/取消全选/反选
-	 */
-	
+	/*全选/取消全选/多选监听*/
 	var fileTypeCheckBox = $('input[name="filetype"]');
 
 	// 全选按钮
