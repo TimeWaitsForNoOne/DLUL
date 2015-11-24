@@ -385,8 +385,14 @@ ul {
 }
 .page .title {
 	height: 32px;
+	width: 400px;
+	margin: 0 auto;
 	background: url(../images/title.png) no-repeat;
-	
+}
+.page .title a {
+	display: block;
+	height: 32px;
+	text-indent: -9999px;
 }
 
 /*分页列表统一设置*/
