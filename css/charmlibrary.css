@@ -1,0 +1,374 @@
+@charset "utf-8";
+/*==全局设置==*/
+body {
+	margin: 0;
+	font-family: Microsoft Yahei,SimSun,Tahoma,Helvetica,Arial,sans-serif;
+}
+
+p,h3,h4,ul {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*==网页头部==*/
+.header {
+	width: 980px;
+	height: 63px;
+	margin: 0 auto;
+	padding: 17px 0 15px;
+}
+
+/*==banner==*/
+.banner {
+	position: relative;
+	height: 400px;
+	overflow: hidden;
+}
+
+/*==轮播图容器==*/
+.banner #imglist {
+	position: absolute;
+	left: -100%;
+	width: 500%;
+	height: 400px;
+	line-height: 400px;
+	z-index: 1;
+}
+
+/*==图片==*/
+#imglist .img {
+	background: url(../images/lib1.jpg) center no-repeat;
+	background-size: cover;
+	display: block;
+	float: left;
+	width: 20%;
+	height: 400px;
+	text-align: center;
+	font-size: 80px;
+	color: #456;
+	background-color: #ccc;
+}
+
+#imglist .img1 {
+	background: url(../images/lib1.jpg) center no-repeat;
+}
+
+#imglist .img2 {
+	background: url(../images/lib2.jpg) center no-repeat;
+}
+
+#imglist .img3 {
+	background: url(../images/lib3.jpg) center no-repeat;
+}
+
+#imglist .img4 {
+	background: url(../images/lib4.jpg) center no-repeat;
+}
+
+/*==小圆点按钮==*/
+#btnlist {
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	bottom: 20px;
+	z-index: 2;
+	width: 100px;
+	height: 10px;
+	text-align: center;
+}
+
+#btnlist span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #333;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#btnlist span.on {
+	background: #E65B18;
+}
+
+/*==左右箭头==*/
+.arrow {
+	position: absolute;
+	top: 180px;
+	z-index: 2;
+	display: none;
+	background: rgba(0,0,0,0.3);
+	color: #fff;
+	font-size: 36px;
+	width: 40px;	
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.arrow:hover {
+	background: rgba(0,0,0,0.7);
+}
+
+.banner:hover .arrow {
+	display: block;
+}
+
+#prev {
+	left: 16px;
+}
+
+#next {
+	right: 16px;
+}
+
+/*==搜索文档==*/
+.searchdoc {
+	width: 938px;
+	height: 48px;
+	line-height: 48px;
+	margin: 20px auto;
+	padding: 0 20px;
+	background-color: #f3f7ff;
+	border: 1px solid #cfd7e5;
+}
+
+/*==checkbox==*/
+.checkbox-wrapper {
+	height: 48px;
+	float: left;
+}
+
+.checkbox-wrapper label {
+	font-size: 14px;
+	margin-right: 15px;
+	color: #555;
+}
+
+.checkbox-wrapper label:first-child {
+	display: inline-block;
+	width: 80px;
+	margin-right: 0;
+}
+
+.checkbox-wrapper input {
+	margin: 0;
+	height: 14px;
+	width: 14px;
+	vertical-align: middle;
+}
+
+/*==搜索框和按钮==*/
+.input-wrapper {
+	height: 48px;
+	float: right;
+}
+
+.input-wrapper input[type="text"] {
+	width: 340px;
+	height: 28px;
+	padding: 0 10px;
+	margin: 0;
+	border: 1px solid #ccc;
+}
+
+.input-wrapper input[type="button"] {
+	width: 110px;
+	height: 30px;
+	padding: 0;
+	padding-left: 20px;
+	border: none;
+	background: #3f69b8 url(../images/icons2.png) no-repeat 15px -164px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+
+/*==主内容区==*/
+.content-wrapper {
+	width: 980px;
+	min-height: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/*==左侧内容区==*/
+.content-wrapper .content-left {
+	float: left;
+	width: 280px;
+}
+
+/*==上传我的文档==*/
+.content-left .upload {
+	border: 3px solid #cfd7e5;
+	padding: 10px;
+}
+
+.content-left .upload a {
+	display: block;
+	width: 204px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	padding-left: 46px;
+	font-size: 20px;
+	color: #fff;
+	background: #ff6e01 url(../images/icons2.png) no-repeat 38px 0;
+}
+
+.content-left .upload p {
+	padding-top: 10px;
+	font-size: 14px;
+	color: #555;
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+}
+
+.content-left .upload p span {
+	color: #d4423b;
+	padding: 0 5px;
+}
+
+/*==热门内容==*/
+.content-left .title-wrapper {
+	margin-top: 10px;
+	height: 36px;
+	color: #fff;
+	background-color: #3f69b8;
+}
+
+.content-left .title-wrapper h4 {
+	float: left;
+	padding-left: 15px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+/*==选项卡菜单==*/
+.content-left .tab-title {
+	float: right;
+	height: 26px;
+	line-height: 26px;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+.content-left .tab-title li {
+	float: left;
+	width: 38px;
+	margin: 0 1px;
+	text-align: center;
+}
+
+.content-left .tab-title .active {
+	background: #fff;
+	color: #3f69b8;
+	font-weight: bold;
+	border-radius: 3px 3px 0 0;
+}
+
+/*==选项卡对应内容==*/
+.content-left .tab-content {
+	padding: 12px 0;
+	border: 3px solid #3f69b8;
+	border-top: none;
+	font-size: 12px;	
+	color: #555;
+}
+
+.content-left .tab-content li {
+	height: 24px;
+	line-height: 24px;
+}
+
+.content-left .tab-content li a {
+	display: block;
+	height: 24px;
+	padding-left: 22px;
+	color: #444;
+	background: url(../images/icons.png) no-repeat 10px -427px;
+}
+
+.content-left .tab-content a:hover {
+	background-position: 10px -466px;
+	color: #ff6e01;
+	text-decoration: underline;
+} 
+
+
+/*==右侧内容区==*/
+.content-wrapper .content-right {
+	float: right;
+	width: 680px;
+}
+
+/*==标题==*/
+.content-wrapper .content-right h3 {
+	height: 36px;
+	line-height: 36px;
+	padding-bottom: 4px;
+	font-size: 24px;
+	font-weight: normal;
+	color: #3f69b8;
+}
+
+.content-right .pic-wrapper {
+	margin-right: -25px;
+	padding: 15px;
+	overflow: hidden;
+}
+
+.content-right .pic-wrapper li {
+	float: left;
+	margin-right: 25px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.content-right .pic-wrapper li:hover .layer {
+	height: 0;
+}
+
+.content-right .pic-wrapper a {
+	display: block;
+	width: 200px;
+	height: 360px
+}
+
+.content-right .pic-wrapper img {
+	width: 200px;
+	height: 360px;
+}
+
+.content-right .pic-wrapper .layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 200px;
+	height: 360px;
+	background: rgba(0,0,0,0.3);
+	transition: all 0.5s;
+}
+
+/*==footer==*/
+.footer {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 14px;
+	color: #555;
+	background-color: #eee;
+}

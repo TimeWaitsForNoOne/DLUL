@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/charmlibrary.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/charmlibrary.js"></script>
+</head>
+<body>
+	<!-- header start -->
+	<div id="header" class="header">
+		<!-- logo -->
+		<a href="index.html" target="_blank"><img src="images/logo2.png" alt="logo"></a>
+	</div>
+	<!-- header end -->
+
+	<!-- banner start -->
+	<div class="banner">
+		<!-- 图片列表 -->
+		<div id="imglist">
+			<div class="img img4"></div>
+			<div class="img img1"></div>
+			<div class="img img2"></div>
+			<div class="img img3"></div>
+			<div class="img img4"></div>
+		</div>
+		<!-- 按钮列表 -->
+		<div id="btnlist">
+			<span data-index="1" class="on"></span>
+			<span data-index="2"></span>
+			<span data-index="3"></span>
+			<span data-index="4"></span>
+		</div>
+		<!-- 左右箭头 -->
+		<span id="prev" class="arrow">&lt;</span>
+		<span id="next" class="arrow">&gt;</span>
+	</div>
+	<!-- banner end -->
+
+	<!-- searchdoc start -->
+	<div class="searchdoc">
+		<div class="checkbox-wrapper">
+			<label>
+				<input type="checkbox" id="all">
+				<span>全选</span>
+			</label>
+			<label>
+				<input type="checkbox" id="doc" name="filetype">
+				doc
+			</label>
+			<label>
+				<input type="checkbox" id="xls" name="filetype">
+				xls
+			</label>
+			<label>
+				<input type="checkbox" id="ppt" name="filetype">
+				ppt
+			</label>
+			<label>
+				<input type="checkbox" id="txt" name="filetype">
+				txt
+			</label>
+			<label>
+				<input type="checkbox" id="pdf" name="filetype">
+				pdf
+			</label>
+		</div>
+		<div class="input-wrapper">
+			<input type="text" placeholder="请输入文档名称">
+			<input type="button" value="搜索文档">
+		</div>
+	</div>
+	<!-- searchdoc end -->
+
+	<!-- content-wrapper start -->
+	<div class="content-wrapper">
+		<div class="content-left">
+			<div class="upload">
+				<a href="#">上传我的文档</a>
+				<p>共有文档数：<span>660</span>份</p>
+			</div>
+			<div class="title-wrapper">
+				<h4>热门文档</h4>
+				<ul class="tab-title" id="tab-title">
+					<li class="active">本日</li>
+					<li>本周</li>
+					<li>本月</li>
+				</ul>
+			</div>
+			<ul class="tab-content">
+				<li><a href="#">衣服会说话</a></li>
+				<li><a href="#">坚守信念--管相应纪念馆观后感</a></li>
+				<li><a href="#">以感恩的心面对孤独症的孩子</a></li>
+				<li><a href="#">天大地大，民意最大</a></li>
+				<li><a href="#">敬畏自然</a></li>
+				<li><a href="#">曾其峰先生的六个忠告</a></li>
+				<li><a href="#">不同的经历 相同的伤痕</a></li>
+				<li><a href="#">电话</a></li>
+			</ul>
+			<ul class="tab-content" style="display: none;">
+				<li><a href="#">一个熟悉又陌生的城市—汕头</a></li>
+				<li><a href="#">衣服会说话</a></li>
+				<li><a href="#">现实与虚幻中的孤独</a></li>
+				<li><a href="#">女人当自尊自爱自信自强---读《简爱》有</a></li>
+				<li><a href="#">参观关向应纪念馆有感</a></li>
+				<li><a href="#">与那些好书的偶然邂逅</a></li>
+				<li><a href="#">图书馆重视安全教育，启动应急预案</a></li>
+				<li><a href="#">以感恩的心面对孤独症的孩子</a></li>
+			</ul>
+			<ul class="tab-content" style="display: none;">
+				<li><a href="#">图书馆占座之我见</a></li>
+				<li><a href="#">参观关向应纪念馆有感</a></li>
+				<li><a href="#">对图书馆占座问题的几点看法</a></li>
+				<li><a href="#">女人当自尊自爱自信自强---读《简爱》有</a></li>
+				<li><a href="#">坚守信念--关向应纪念馆观后感</a></li>
+				<li><a href="#">图书馆重视安全教育，启动应急预案</a></li>
+				<li><a href="#">一杯茶一把椅</a></li>
+				<li><a href="#">与那些好书的偶然邂逅</a></li>
+			</ul>
+		</div>
+		<div class="content-right">
+			<h3>精品推荐</h3>
+			<ul class="pic-wrapper">
+				<li>
+					<a href="#"><img src="images/clpic9.jpg"></a>
+					<div class="layer"></div>
+				</li>
+				<li>
+					<a href="#"><img src="images/clpic2.jpg"></a>
+					<div class="layer"></div>
+				</li>
+				<li>
+					<a href="#"><img src="images/clpic8.jpg"></a>
+					<div class="layer"></div>
+				</li>
+				<li>
+					<a href="#"><img src="images/clpic4.jpg"></a>
+					<div class="layer"></div>
+				</li>
+				<li>
+					<a href="#"><img src="images/clpic5.jpg"></a>
+					<div class="layer"></div>
+				</li>
+				<li>
+					<a href="#"><img src="images/clpic6.jpg"></a>
+					<div class="layer"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- content-wrapper end -->
+
+	<!-- footer start -->
+	<div class="footer">
+		<p>Copyright &copy; 2001-2015 大连大学图书馆 All Rights Reserved.</p>
+	</div>
+	<!-- footer end -->
+
+</body>
+</html>
