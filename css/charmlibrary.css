@@ -242,6 +242,7 @@ a {
 /*==热门内容==*/
 .content-left .title-wrapper {
 	margin-top: 10px;
+	padding-right: 5px;
 	height: 36px;
 	color: #fff;
 	background-color: #3f69b8;
@@ -270,6 +271,7 @@ a {
 	width: 38px;
 	margin: 0 1px;
 	text-align: center;
+	transition: all 0.4s;
 }
 
 .content-left .tab-title .active {

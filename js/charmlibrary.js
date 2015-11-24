@@ -126,4 +126,16 @@ $(document).ready(function() {
 		}
 	});
 
+	var tabTitle = $('#tab-title li');
+
+	tabTitle.mouseover(function(event) {
+		// 当前选项卡高亮
+		tabTitle.removeClass('active');
+		$(this).addClass('active');
+		// 取得当前选项卡的下标
+		var index = tabTitle.index($('.active'));
+		// 当前选项卡对应内容显示
+		$('.tab-content').css('display', 'none');
+		$('.tab-content').eq(index).css('display','block');
+	});
 });
