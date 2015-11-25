@@ -255,7 +255,7 @@ window.onload = function() {
 		if (localStorage.endIndex == '-1') return null;
 
 		// 删除以前的提示
-		for (var j = searchTips.childElementCount; j > 0 ; j --) {
+		while (searchTips.childElementCount) {
 			searchTips.removeChild(searchTips.lastElementChild);
 		}
 

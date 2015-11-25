@@ -64,18 +64,8 @@ ul {
 	background: url(../images/icons3.png) center -595px no-repeat; 
 }
 
-.menu > li:hover {
-	background-color: #ff6e01;
-}
 .menu > li:hover .sub-menu {
 	display: block;
-}
-.menu > li:hover::after {
-	content: '';
-	display: block;
-	width: 120px;
-	height: 5px;
-	background: url(../images/icons3.png) center -595px no-repeat;
 }
 
 .menu > li > a {
@@ -96,18 +86,12 @@ ul {
 .menu li.active .resource {
 	background-position: 16px -98px;
 }
-.menu li:hover .resource {
-	background-position: 16px -98px;	
-}
 
 .menu a.service {
 	background-position: -97px 18px;
 }
 .menu li.active .service {
 	background-position: -97px -98px;
-}
-.menu li:hover .service {
-	background-position: -97px -98px;	
 }
 
 .menu a.survey {
@@ -116,9 +100,7 @@ ul {
 .menu li.active .survey {
 	background-position: -205px -98px;
 }
-.menu li:hover .survey {
-	background-position: -205px -98px;	
-}
+
 
 .menu a.charmlibrary {
 	background-position: -315px 18px;
@@ -126,18 +108,13 @@ ul {
 .menu li.active .charmlibrary {
 	background-position: -315px -98px;
 }
-.menu li:hover .charmlibrary {
-	background-position: -315px -98px;	
-}
+
 
 .menu a.thinker {
 	background-position: -422px 18px;
 }
 .menu li.active .thinker {
 	background-position: -422px -98px;
-}
-.menu li:hover .thinker {
-	background-position: -422px -98px;	
 }
 
 /*==二级导航菜单==*/
@@ -245,6 +222,7 @@ ul {
 	height: 48px;
 	line-height: 48px;
 	background-color: #e1e1e1;
+	margin-bottom: 5px;
 	font-weight: normal;
 }
 
