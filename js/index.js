@@ -376,25 +376,37 @@ window.onload = function() {
 	var flag = true;
 
 	/*监听鼠标滚轮事件*/
-	document.onmousewheel = function(event) {
+	var scrollFun = function(event) {
 		// 定义一个参数
 		var param;
+		// 兼容火狐
+		if (event.wheelDelta) {
+			// 鼠标向下滚动
+			if (event.wheelDelta < 0)
+				param = true;
+			// 鼠标向上滚动
+			else 
+				param = false;
+		} else {
+			if (event.detail > 0)
+				param = true;
+			else
+				param = false;
+		}
 
-		// 鼠标向下滚动
-		if (event.wheelDelta < 0)
-			param = true;
-		// 鼠标向上滚动
-		else 
-			param = false;
 	
 		animate(param); 
 	};
+
+	document.onmousewheel = scrollFun;
+	// 兼容火狐
+	document.addEventListener('DOMMouseScroll', scrollFun, false)
 
 	/*监听上下按键事件*/
 	document.onkeydown = function(event) {
 
 		// 回车键
-		if (event.keyCode == 13) {
+		if (event.keyCode == 13 && !flag) {
 			if (keyIndex != -1) {
 				keyWord.value = searchTips.getElementsByTagName('li')[keyIndex].innerHTML;
 			} else {
@@ -415,6 +427,7 @@ window.onload = function() {
 		if (event.keyCode == 38) {
 			if (flag) {
 				param = false;
+				animate(param);
 			} else {
 				keyIndex--;
 				if (keyIndex < 0) 
@@ -426,6 +439,7 @@ window.onload = function() {
 		if (event.keyCode == 40) {
 			if (flag) {
 				param = true; 
+				animate(param);
 			} else {
 				keyIndex++;
 				if (keyIndex > localStorage.length - 3)
@@ -433,8 +447,6 @@ window.onload = function() {
 				highlightItem(); 
 			}
 		}
-
-		animate(param);
 	};
 
 	/*首页向下箭头点击事件*/
@@ -474,6 +486,7 @@ window.onload = function() {
 
 	/*页面滚动函数*/
 	function animate(param) {
+		
 		if (flag) {
 			// 立即将标志置为false
 			flag = false;

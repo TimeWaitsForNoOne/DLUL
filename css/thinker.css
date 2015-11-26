@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+body {
+	background: url(../images/bodybg.png);
+}
+
+/* 最外层容器 */
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* banner */
+.banner {
+	height: 280px;
+	background: url(../images/banner3.jpg) center no-repeat;
+}
+
+.nav {
+	background-color: #F3D384;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+.nav li {
+	float: left;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;	
+}
+
+.nav li a {
+	font-size: 15px;
+	display: block;
+	height: 50px;
+	color: #333;
+}
+
+.nav li a:hover {
+	color: #743c00;
+	font-weight: bold;
+}
+
+.content-left {
+	float: left;
+	width: 238px;
+	height: 600px;
+	border: 1px solid #dcceae;
+	background-color: #fff;
+}
+
+.content-right {
+	float: right;
+	width: 748px;
+	border: 1px solid #dcceae;
+}

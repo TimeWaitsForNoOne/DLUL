@@ -75,11 +75,11 @@ $(document).ready(function() {
 		$('#btnlist span').eq(index-1).addClass('on');
 	}
 
-	var timerId;
+	var timerId1;
 
 	// 自动播放
 	function autoPlay() {
-		timerId = window.setInterval(function() {
+		timerId1 = window.setInterval(function() {
 			// 模拟用户事件，让next按钮发生单机事件
 			$('#next').click(); 
 		}, 2000);
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 	// 第一个参数：鼠标移上函数，第二个参数：鼠标移出函数
 	$('.banner').hover(function() {
-		window.clearInterval(timerId);
+		window.clearInterval(timerId1);
 	}, function() {
 		autoPlay();
 	});
@@ -128,14 +128,49 @@ $(document).ready(function() {
 
 	var tabTitle = $('#tab-title li');
 
-	tabTitle.mouseover(function(event) {
+	var tabIndex = 0;// 播放索引
+
+	var timerId2;
+
+	autoChangeTab();
+
+	/*自动切换选项卡函数*/
+	function changeTab() {	
 		// 当前选项卡高亮
 		tabTitle.removeClass('active');
-		$(this).addClass('active');
-		// 取得当前选项卡的下标
-		var index = tabTitle.index($('.active'));
+		tabTitle.eq(tabIndex).addClass('active');
 		// 当前选项卡对应内容显示
 		$('.tab-content').css('display', 'none');
-		$('.tab-content').eq(index).css('display','block');
+		$('.tab-content').eq(tabIndex).css('display','block');
+	}
+
+	/*自动切换*/
+	function autoChangeTab() {
+		timerId2 = window.setInterval(function() {
+			changeTab();
+			tabIndex ++;
+			if (tabIndex > tabTitle.length - 1)
+				tabIndex = 0;
+		}, 3000);
+	}
+
+	/*标题滑入滑出事件*/
+	tabTitle.mouseover(function(event) {
+		// 停止自动播放
+		clearInterval(timerId2);
+		// 取得当前选项卡的下标
+		var tabIndex = tabTitle.index($('.active'));
+		changeTab();
+	});
+
+	tabTitle.mouseout(function(event) {
+		autoChangeTab();
+	});
+
+	/*内容区滑入滑出事件*/
+	$('.tab-content').hover(function() {
+		clearInterval(timerId2);
+	}, function() {
+		autoChangeTab();
 	});
 });
