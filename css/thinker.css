@@ -8,6 +8,7 @@ body {
 .wrapper {
 	width: 1000px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 /* banner */
@@ -54,4 +55,45 @@ body {
 	float: right;
 	width: 748px;
 	border: 1px solid #dcceae;
+	background-color: #fff;
+}
+
+.content-right h2 {
+	height: 60px;
+	line-height: 60px;
+	color: #dcceae;
+	padding-left: 20px;
+	font-weight: normal;
+}
+
+.content-right ul {
+	padding: 0 20px 20px;
+}
+
+.content-right ul hr {
+	border: 1px dotted #ccc;
+}
+
+.content-right li {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 20px;
+}
+
+.content-right li a {
+	font-size: 14px;
+	color: #555;
+}
+
+.content-right li a:hover {
+	color: #743c00;
+	text-decoration: underline;
+}
+
+.footer {
+	font-size: 14px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: #555;
 }

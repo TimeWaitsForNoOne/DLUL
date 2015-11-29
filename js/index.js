@@ -13,10 +13,16 @@ window.onload = function() {
 	var calendarDate = document.getElementById('calendar-date').getElementsByTagName('li');
 
 	var today = new Date(); 
+	// 年
+	var year = today.getFullYear();
+	// 月份
+	var month = today.getMonth() + 1;
 	// 日期
 	var date = today.getDate();
 	// 星期几
 	var day = today.getDay();
+	// 当前月份天数
+	var monthdays; 
 
 	for (var i = day; i >= 0; i --) {
 		calendarDate[i].innerHTML = date --;
@@ -24,11 +30,24 @@ window.onload = function() {
 	// 重置当前日期
 	date = today.getDate();
 
-	for (var j = day + 1; j <= 6; j ++) {
-		calendarDate[j].innerHTML = ++ date;
+	if(month == 2) {
+		if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {  //如果是闰年，2月有29天
+			monthdays = 29;
+		}else {  //反之是平年，2月有28天
+			monthdays = 28;
+		}
+	} else if (month == 4 || month == 6 || month == 9 || month == 11) {
+		monthdays = 30;
+	} else {  
+		monthdays = 31;
 	}
 
-
+	for (var j = day + 1; j <= 6; j ++) {
+		calendarDate[j].innerHTML = ++ date;
+		// 差超过当前月份天数，置0
+		 if (date == monthdays)
+		 	date = 0;
+	}
 	
 	// 关闭按钮
 	var closeBtn = document.getElementById('close');
@@ -423,6 +442,8 @@ window.onload = function() {
 		// 定义一个参数
 		var param;
 
+		// 搜索记录长度
+		var tipLength = endIndex - startIndex;
 		// 上键
 		if (event.keyCode == 38) {
 			if (flag) {
@@ -431,7 +452,7 @@ window.onload = function() {
 			} else {
 				keyIndex--;
 				if (keyIndex < 0) 
-					keyIndex = localStorage.length - 3;
+					keyIndex = tipLength;
 				highlightItem();
 			}
 		}
@@ -442,7 +463,7 @@ window.onload = function() {
 				animate(param);
 			} else {
 				keyIndex++;
-				if (keyIndex > localStorage.length - 3)
+				if (keyIndex > tipLength)
 					keyIndex = 0;
 				highlightItem(); 
 			}
